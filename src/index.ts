@@ -1,5 +1,5 @@
-export { default as VAnnotator } from './react/VAnnotator';
-export type { VAnnotatorProps } from './react/VAnnotator';
+export { default as ReactSpanAnnotator } from './react/ReactSpanAnnotator';
+export type { ReactSpanAnnotatorProps } from './react/ReactSpanAnnotator';
 export { default as VLine } from './react/VLine';
 export type { VLineProps } from './react/VLine';
 export { default as BaseEntity } from './react/BaseEntity';

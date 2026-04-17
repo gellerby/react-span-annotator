@@ -16,7 +16,7 @@ npm install react react-dom
 
 ```tsx
 import { useState } from 'react';
-import { VAnnotator } from 'react-span-annotator';
+import { ReactSpanAnnotator } from 'react-span-annotator';
 import type { Entity, Label, Relation } from 'react-span-annotator';
 
 const text = 'Tokyo is the capital of Japan.';
@@ -37,7 +37,7 @@ export default function App() {
   };
 
   return (
-    <VAnnotator
+    <ReactSpanAnnotator
       text={text}
       entities={entities}
       entityLabels={entityLabels}
@@ -121,7 +121,7 @@ interface Relation {
 ## Example with relations
 
 ```tsx
-import { VAnnotator } from 'react-span-annotator';
+import { ReactSpanAnnotator } from 'react-span-annotator';
 import type { Entity, Label, Relation } from 'react-span-annotator';
 
 const text = 'Alice knows Bob.';
@@ -145,7 +145,7 @@ const relationLabels: Label[] = [
 
 export default function App() {
   return (
-    <VAnnotator
+    <ReactSpanAnnotator
       text={text}
       entities={entities}
       entityLabels={entityLabels}

@@ -32,7 +32,7 @@ interface ViewLine {
   size: number;
 }
 
-export interface VAnnotatorProps {
+export interface ReactSpanAnnotatorProps {
   text: string;
   entities: Entity[];
   entityLabels: Label[];
@@ -57,7 +57,7 @@ const EMPTY_ENTITIES: Entity[] = [];
 const EMPTY_LABELS: Label[] = [];
 const EMPTY_RELATIONS: Relation[] = [];
 
-const VAnnotator: React.FC<VAnnotatorProps> = ({
+const ReactSpanAnnotator: React.FC<ReactSpanAnnotatorProps> = ({
   text = '',
   entities = EMPTY_ENTITIES,
   entityLabels = EMPTY_LABELS,
@@ -344,4 +344,4 @@ const VAnnotator: React.FC<VAnnotatorProps> = ({
   );
 };
 
-export default VAnnotator;
+export default ReactSpanAnnotator;

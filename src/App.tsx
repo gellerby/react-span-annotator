@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { VAnnotator } from './react';
+import { ReactSpanAnnotator } from './react';
 import { Entity } from './domain/models/Label/Entity';
 import type { Label } from './domain/models/Label/Label';
 import type { Relation } from './domain/models/Label/Relation';
@@ -117,7 +117,7 @@ export default function App() : JSX.Element {
       </div>
 
       <div style={{ border: '1px solid #ddd', borderRadius: 6, padding: 8 }}>
-        <VAnnotator
+        <ReactSpanAnnotator
           text={text}
           entities={entities}
           entityLabels={entityLabels}
