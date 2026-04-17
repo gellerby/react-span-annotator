@@ -1,11 +1,15 @@
 {
   "name": "react-span-annotator",
-  "version": "0.1.31",
+  "version": "0.2",
   "description": "React component for annotating text with named entities and relations",
   "private": false,
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gellerby/react-span-annotator.git"
+  },
   "exports": {
     ".": {
       "import": "./dist/index.esm.js",
