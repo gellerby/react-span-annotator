@@ -2,6 +2,8 @@
 
 React component for annotating text with named entities and relations.
 
+**[Live demo](https://gellerby.github.io/react-span-annotator/)**
+
 ![](docs/ner.png)
 
 ## Install

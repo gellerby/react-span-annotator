@@ -64,7 +64,7 @@ export default function App() : JSX.Element {
 
   return (
     <div style={{ fontFamily: 'sans-serif', maxWidth: 900, margin: '0 auto', padding: 24 }}>
-      <h1 style={{ fontSize: 20, marginBottom: 4 }}>v-annotator demo</h1>
+      <h1 style={{ fontSize: 20, marginBottom: 4 }}>react-span-annotator demo</h1>
       <p style={{ color: '#666', fontSize: 14, marginBottom: 16 }}>
         Select text to add an entity label. Click an entity to highlight it. Right-click to remove.
       </p>
