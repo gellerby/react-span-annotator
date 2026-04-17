@@ -1,6 +1,6 @@
 {
   "name": "react-span-annotator",
-  "version": "0.2",
+  "version": "0.2.0",
   "description": "React component for annotating text with named entities and relations",
   "private": false,
   "main": "dist/index.cjs.js",
