@@ -85,4 +85,16 @@ describe("Labels", () => {
     );
     expect(entityLabels.getById(id)).toBeInstanceOf(EntityLabelListItem);
   });
+
+  it("valueOf uses backgroundColor when color is absent", () => {
+    const labelObjects = [{ id, text, backgroundColor: "blue" }];
+    const widths = [10];
+    const entityLabels = LabelList.valueOf(
+      config.maxLabelLength,
+      labelObjects,
+      widths,
+      LabelListItem
+    );
+    expect(entityLabels.getById(id)!.color).toBe("blue");
+  });
 });

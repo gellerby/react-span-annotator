@@ -1,5 +1,6 @@
 import { Entity } from "@/domain/models/Label/Entity";
 import { Entities } from "@/domain/models/Label/Entity";
+import { Text } from "@/domain/models/Label/Text";
 
 describe("Entities", () => {
   it("can be filtered by range", () => {
@@ -50,5 +51,25 @@ describe("Entities", () => {
     expect(entities.intersectAny(4, 6)).toBeTruthy();
     expect(entities.intersectAny(5, 6)).toBeFalsy();
     expect(entities.intersectAny(1, 5)).toBeTruthy();
+  });
+});
+
+describe("Entities.valueOf", () => {
+  it("without text maps offsets directly", () => {
+    const raw = [new Entity(0, 0, 1, 3), new Entity(1, 0, 5, 8)];
+    const entities = Entities.valueOf(raw);
+    expect(entities.findById(0)!.startOffset).toBe(1);
+    expect(entities.findById(0)!.endOffset).toBe(3);
+    expect(entities.findById(1)!.startOffset).toBe(5);
+  });
+
+  it("with text converts grapheme offsets to code point offsets", () => {
+    // "👶🏻👦🏻" — each emoji is 4 code points, grapheme offsets 0,1,2
+    const text = new Text("👶🏻👦🏻");
+    const raw = [new Entity(0, 0, 0, 1)]; // grapheme offsets
+    const entities = Entities.valueOf(raw, text);
+    // grapheme 0 → codepoint 0, grapheme 1 → codepoint 4
+    expect(entities.findById(0)!.startOffset).toBe(0);
+    expect(entities.findById(0)!.endOffset).toBe(4);
   });
 });

@@ -1,4 +1,5 @@
-import { Range, Ranges } from "@/domain/models/Line/LineEntity";
+import { GeometricEntity, Range, Ranges } from "@/domain/models/Line/LineEntity";
+import { Entity } from "@/domain/models/Label/Entity";
 
 describe("Range", () => {
   it("center", () => {
@@ -111,5 +112,25 @@ describe("Ranges", () => {
       [0, 10],
     ];
     expect(actual).toEqual(expected);
+  });
+});
+
+describe("GeometricEntity", () => {
+  it("center delegates to ranges.center", () => {
+    const entity = new Entity(0, 0, 0, 10);
+    const ranges = new Ranges();
+    ranges.add(10, 30);
+    const geo = new GeometricEntity(entity, ranges, 0);
+    expect(geo.center).toEqual(ranges.center);
+    expect(geo.center).toEqual(20);
+  });
+
+  it("stores entity and level", () => {
+    const entity = new Entity(5, 1, 2, 8);
+    const ranges = new Ranges();
+    ranges.add(0, 0);
+    const geo = new GeometricEntity(entity, ranges, 3);
+    expect(geo.entity).toBe(entity);
+    expect(geo.level).toBe(3);
   });
 });

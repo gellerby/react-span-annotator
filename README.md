@@ -1,5 +1,8 @@
 # react-span-annotator
 
+[![CI](https://github.com/gellerby/react-span-annotator/actions/workflows/ci.yml/badge.svg)](https://github.com/gellerby/react-span-annotator/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/gellerby/react-span-annotator/branch/main/graph/badge.svg)](https://codecov.io/gh/gellerby/react-span-annotator)
+
 React component for annotating text with named entities and relations.
 
 **[Live demo](https://gellerby.github.io/react-span-annotator/)**
