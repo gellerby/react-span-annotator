@@ -23,11 +23,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: yarn
+          cache: npm
 
-      - run: yarn install --frozen-lockfile
+      - run: npm ci
 
-      - run: yarn vite build --config vite.config.demo.ts
+      - run: npm run build:demo
 
       - uses: actions/upload-pages-artifact@v3
         with:
