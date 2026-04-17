@@ -72,10 +72,5 @@
     "typescript": "~4.1.5",
     "vite": "^8.0.8",
     "vite-plugin-dts": "^4.5.4"
-  },
-  "jest": {
-    "setupFiles": [
-      "jest-canvas-mock"
-    ]
   }
 }
